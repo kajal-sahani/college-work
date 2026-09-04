@@ -1,0 +1,10 @@
+2025-01-10 09:15:23 INFO User login successful - user_id=101
+2025-01-10 09:17:45 WARNING Failed login attempt - user_id=205
+2025-01-10 10:02:11 ERROR Database connection timeout
+2025-01-10 10:05:33 INFO User logout - user_id=101
+2025-01-10 11:20:01 INFO New order placed - order_id=5001
+2025-01-10 11:22:18 ERROR Payment gateway failure
+2025-01-10 12:00:00 INFO Daily backup completed successfully
+2025-01-10 13:45:09 WARNING High memory usage detected
+2025-01-10 14:10:55 INFO User login successful - user_id=108
+2025-01-10 15:30:00 ERROR File not found: report.pdf
