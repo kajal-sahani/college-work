@@ -1,0 +1,194 @@
+
+{% extends 'base.html' %}
+
+{% block headersection %}
+<section class="header-container cozy-home">
+    <div class="home-text">
+        <p class="welcome-label">✿ WELCOME TO MY LITTLE CORNER</p>
+
+        <h1>Hello, I'm <span>Kajal Sahani.</span></h1>
+
+        <h2>Aspiring Software Developer <span class="home-dot">•</span> Computer Science Student</h2>
+
+        <p class="home-description">
+            I'm a Computer Science Engineering student at
+            Jain University who enjoys exploring technology,
+            learning programming and creating things for the web.
+            <br><br>
+            This is my little space on the internet where
+            I share my learning journey, skills and projects.
+        </p>
+
+        <div class="home-buttons">
+            <a href="#projects" class="btn btn-secondary">
+                Explore My Work <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="https://github.com/kajal-sahani"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn home-outline-btn">
+                <i class="fab fa-github"></i> My GitHub
+            </a>
+        </div>
+
+        <p class="home-note">
+            <i class="fas fa-heart"></i>
+            Learning something new, one line of code at a time.
+        </p>
+    </div>
+
+    <div class="home-photo-area">
+        <div class="photo-decoration">
+            <img class="profile-image home-profile-image"
+                 src="{{ url_for('static', filename='assets/profile.jpeg') }}"
+                 alt="Kajal Sahani" />
+        </div>
+
+        <div class="photo-caption">
+            <span>✿</span> A little introduction about me
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block body %}
+
+<!-- ABOUT SECTION -->
+<section id="about" class="portfolio-section container">
+    <div class="section-heading">
+        <p class="section-label">GET TO KNOW ME</p>
+        <h2>About Me</h2>
+        <p>A little about who I am and what I enjoy learning.</p>
+    </div>
+
+    <div class="textcard about-card">
+        <h3>Hello there! ✿</h3>
+
+        <p>
+            I'm Kajal Sahani, a B.Tech Computer Science Engineering
+            student at Jain University.
+        </p>
+
+        <p>
+            I'm interested in programming, software development
+            and web technologies. I enjoy learning how technology
+            works and exploring how ideas can become useful
+            digital projects.
+        </p>
+
+        <p>
+            I'm currently strengthening my technical foundations
+            and looking forward to gaining more practical
+            development experience.
+        </p>
+    </div>
+</section>
+
+
+<!-- EDUCATION SECTION -->
+<section id="education" class="portfolio-section container">
+    <div class="section-heading">
+        <p class="section-label">MY ACADEMIC JOURNEY</p>
+        <h2>Education</h2>
+        <p>The learning journey that shapes my technical interests.</p>
+    </div>
+
+    <div class="textcard education-card">
+        <p class="section-label">UNDERGRADUATE</p>
+        <h3>B.Tech — Computer Science Engineering</h3>
+        <p>Jain University</p>
+        <p>
+            Currently pursuing my undergraduate studies and
+            building a foundation in computer science,
+            programming and technology.
+        </p>
+    </div>
+</section>
+
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="portfolio-section container">
+    <div class="section-heading">
+        <p class="section-label">WHAT I'M LEARNING</p>
+        <h2>Technical Knowledge</h2>
+        <p>
+            Technologies and concepts I have studied and am
+            continuing to explore.
+        </p>
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="textcard skill-card">
+            <h3><i class="fas fa-code"></i> Programming Languages</h3>
+            <div class="skill-tags">
+                <span>Python</span>
+                <span>C</span>
+                <span>Java</span>
+            </div>
+        </div>
+
+        <div class="textcard skill-card">
+            <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
+            <div class="skill-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Flask</span>
+            </div>
+        </div>
+
+        <div class="textcard skill-card">
+            <h3><i class="fas fa-database"></i> Database</h3>
+            <div class="skill-tags">
+                <span>SQL</span>
+            </div>
+        </div>
+
+        <div class="textcard skill-card">
+            <h3><i class="fas fa-tools"></i> Development Tools</h3>
+            <div class="skill-tags">
+                <span>Git</span>
+                <span>GitHub</span>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="skills-note">
+        ✿ Currently building practical experience with these technologies.
+    </p>
+</section>
+
+
+<!-- FEATURED PROJECTS SECTION -->
+<section id="projects" class="portfolio-section container">
+    <div class="section-heading">
+        <p class="section-label">MY WORK</p>
+        <h2>Projects</h2>
+        <p>
+            A collection of projects and experiments from my
+            learning journey.
+        </p>
+    </div>
+
+    <div class="textcard featured-project-card">
+        <div>
+            <h3>Explore My GitHub Projects</h3>
+            <p>
+                Explore my projects, programming experiments
+                and work as I continue learning and building.
+            </p>
+        </div>
+
+        <a href="{{ url_for('projects_page') }}"
+           class="btn btn-secondary">
+            View All Projects <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+
+{% endblock %}

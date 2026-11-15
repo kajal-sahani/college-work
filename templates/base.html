@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ title if title else "Kajal Sahani - Portfolio" }}</title>
+
+    <!-- Website Icon -->
+    <link rel="icon" type="image/jpeg"
+        href="{{ url_for('static', filename='assets/profile.jpeg') }}" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+        crossorigin="anonymous">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}" />
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/utilities.css') }}" />
+
+</head>
+
+<body>
+
+    <header id="hero">
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+
+            <div class="container">
+
+                <!-- Your Logo / Profile Picture -->
+                <h1 id="logo">
+                    <a href="/">
+                        <img
+                            src="{{ url_for('static', filename='assets/profile.jpeg') }}"
+                            alt="Kajal Sahani Logo"
+                        />
+                    </a>
+                </h1>
+
+                <!-- Navigation Links -->
+                <ul class="nav-menu">
+
+                    <li>
+                        <a class="nav-link" href="/#projects">
+                            PROJECTS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="/#about">
+                            ABOUT
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="/#skills">
+                            SKILLS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="{{ url_for('contact_page') }}">
+                            CONTACT
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="btn btn-primary"
+                           href="https://github.com/kajal-sahani/college-work"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            MY GITHUB
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+
+                    <!-- Theme Toggle -->
+                    <div class="theme-switch">
+
+                        <input type="checkbox" id="switch" />
+
+                        <label class="toggle-icons" for="switch">
+
+                            <img class="moon"
+                                src="{{ url_for('static', filename='assets/moon.svg') }}"
+                                style="box-shadow: none;" />
+
+                            <img class="sun"
+                                src="{{ url_for('static', filename='assets/sun.svg') }}"
+                                style="box-shadow: none;" />
+
+                        </label>
+
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- Home Section -->
+        {% block headersection %}
+        {% endblock %}
+
+    </header>
+
+    <!-- Main Page Content -->
+    {% block body %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <div class="container">
+
+            <h3>Kajal Sahani</h3>
+
+            <p>
+                B.Tech Computer Science Engineering Student
+                <br>
+                Jain University
+            </p>
+
+            <!-- Social Links -->
+            <div class="social">
+
+                <a href="https://github.com/kajal-sahani/college-work"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <img
+                        src="{{ url_for('static', filename='assets/github-icon.svg') }}"
+                        alt="GitHub"
+                        style="border-radius: 0px;"
+                    />
+                </a>
+
+            </div>
+
+            <p>
+                Copyright &copy; 2026 Kajal Sahani.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
